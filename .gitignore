@@ -35,3 +35,5 @@ go.work.sum
 /node_modules
 .DS_Store
 .config
+.env.local
+next-env.d.ts

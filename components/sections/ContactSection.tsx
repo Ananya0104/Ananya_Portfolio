@@ -10,6 +10,7 @@ export default function ContactSection() {
     message: ""
   })
   const [isSending, setIsSending] = useState(false)
+  const [showSuccess, setShowSuccess] = useState(false)
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -30,10 +31,22 @@ export default function ContactSection() {
     setIsSending(true)
 
     try {
-      // For now, simulate email sending
-      await new Promise(resolve => setTimeout(resolve, 1000))
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      const result = await response.json()
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to send message')
+      }
       
-      alert("Message sent successfully!")
+      // Show success message
+      setShowSuccess(true)
       
       // Reset form
       setFormData({
@@ -41,9 +54,15 @@ export default function ContactSection() {
         email: "",
         message: ""
       })
+      
+      // Hide success message after 5 seconds
+      setTimeout(() => {
+        setShowSuccess(false)
+      }, 5000)
     } catch (error) {
       console.error('Error sending email:', error)
-      alert("Failed to send message. Please try again.")
+      const errorMessage = error instanceof Error ? error.message : 'Failed to send message. Please try again.'
+      alert(errorMessage)
     } finally {
       setIsSending(false)
     }
@@ -61,6 +80,31 @@ export default function ContactSection() {
           </h1>
           <div className="w-72 h-px bg-pink-400"></div>
         </div>
+
+        {/* Success Message */}
+        {showSuccess && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+            <div className="bg-white rounded-lg p-8 max-w-md mx-4 text-center shadow-2xl">
+              <div className="mb-4">
+                <div className="text-2xl font-bold text-gray-800 mb-2">
+                  <span className=" decoration-pink-400 decoration-2">Your message</span>
+                </div>
+                <div className="text-2xl font-bold text-gray-800">
+                  <span className=" decoration-pink-400 decoration-2">has been sent!</span>
+                </div>
+              </div>
+              <p className="text-gray-600 text-sm">
+                We appreciate your contact and will get back to you as soon as possible.
+              </p>
+              <button
+                onClick={() => setShowSuccess(false)}
+                className="mt-6 px-6 py-2 bg-pink-400 text-black font-mono rounded-lg hover:bg-pink-500 transition-colors"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        )}
 
         {/* Two Column Layout */}
         <div className="grid lg:grid-cols-2 gap-12">
