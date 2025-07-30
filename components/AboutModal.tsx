@@ -1,6 +1,7 @@
 "use client";
 
-import { X } from "lucide-react";
+import Image from "next/image";
+import { X, Briefcase, GraduationCap, Building2, School, Award } from "lucide-react";
 
 interface AboutModalProps {
   isOpen: boolean;
@@ -109,12 +110,15 @@ export default function AboutModal({ isOpen, onClose, setIsTechStackModalOpen }:
 
               {/* Experience Section */}
               <div className="space-y-5">
-                <h3 className="font-mono text-xl font-semibold text-white">
-                  Experience
+                <h3 className="font-mono text-xl font-semibold text-white flex items-center space-x-2">
+                  <Briefcase className="h-5 w-5 text-pink-400" />
+                  <span>Experience</span>
                 </h3>
                 <div className="space-y-3 text-gray-300 font-mono text-md">
                   <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-pink-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-8 h-8  bg-white rounded-lg flex items-center justify-center mt-1 flex-shrink-0">
+                      <img src="/godai.png" alt="Godai" className="h-7 w-7 object-contain" />
+                    </div>
                     <div>
                       <p className="text-white font-semibold">
                         Software Engineering Intern
@@ -123,7 +127,9 @@ export default function AboutModal({ isOpen, onClose, setIsTechStackModalOpen }:
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-pink-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-8 h-8  bg-white rounded-lg flex items-center justify-center mt-1 flex-shrink-0">
+                      <img src="/ey.png" alt="EY" className="h-7 w-7 object-contain" />
+                    </div>
                     <div>
                       <p className="text-white font-semibold">
                         Generative AI Intern
@@ -136,12 +142,15 @@ export default function AboutModal({ isOpen, onClose, setIsTechStackModalOpen }:
 
               {/* Education Section */}
               <div className="space-y-5">
-                <h3 className="font-mono text-xl font-semibold text-white">
-                  Education
+                <h3 className="font-mono text-xl font-semibold text-white flex items-center space-x-2">
+                  <GraduationCap className="h-5 w-5 text-pink-400" />
+                  <span>Education</span>
                 </h3>
                 <div className="space-y-3 text-gray-300 font-mono text-md">
                   <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-pink-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center mt-1 flex-shrink-0">
+                      <Image src="/iitj.png" alt="IIT Jodhpur" className="h-7 w-7 object-contain" width={28} height={28} />
+                    </div>
                     <div>
                       <p className="text-white font-semibold">
                         Bachelors of Technology
@@ -150,7 +159,9 @@ export default function AboutModal({ isOpen, onClose, setIsTechStackModalOpen }:
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-pink-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-8 h-8  bg-white rounded-lg flex items-center justify-center mt-1 flex-shrink-0">
+                      <Image src="/sid.png" alt="Siddhartha Public School" className="h-7 w-7 object-contain" width={28} height={28} />
+                    </div>
                     <div>
                       <p className="text-white font-semibold">
                         Senior Secondary School
@@ -159,7 +170,9 @@ export default function AboutModal({ isOpen, onClose, setIsTechStackModalOpen }:
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-pink-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-8 h-8  bg-white rounded-lg flex items-center justify-center mt-1 flex-shrink-0">
+                      <Image src="/mdvm.png" alt="MDVM School" className="h-7 w-7 object-contain" width={28} height={28} />
+                    </div>
                     <div>
                       <p className="text-white font-semibold">Secondary School</p>
                       <p>MDVM School, Alwar (2020)</p>
