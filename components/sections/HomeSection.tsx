@@ -71,13 +71,13 @@ export default function HomeSection({ scrollToSection }: HomeSectionProps) {
       </div>
 
       {/* Quote Section */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-full max-w-3xl px-4">
-        <div className="border-2 border-dashed border-white rounded-lg p-6 lg:p-8 text-center">
-          <div className="text-6xl text-pink-400 mb-4">"</div>
-          <p className="font-mono text-white text-xl leading-relaxed">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-full max-w-2xl px-4">
+        <div className="border-2 border-dashed border-white rounded-lg p-4 lg:p-6 text-center">
+          <div className="text-4xl text-pink-400 mb-2">"</div>
+          <p className="font-mono text-white text-lg leading-relaxed">
           Debug your comfort zone — that&apos;s where version 2.0 of you begins.
           </p>
-          <p className="font-mono text-pink-400 text-sm mt-4">- Mr. Who</p>
+          <p className="font-mono text-pink-400 text-xs mt-2">- Mr. Who</p>
         </div>
       </div>
     </section>
