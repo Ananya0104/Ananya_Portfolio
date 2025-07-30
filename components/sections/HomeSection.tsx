@@ -9,9 +9,9 @@ interface HomeSectionProps {
 
 export default function HomeSection({ scrollToSection }: HomeSectionProps) {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center px-8 relative">
+    <section id="home" className="min-h-screen flex items-center justify-center px-4 sm:px-8 relative">
       <div className="geometric-lines"></div>
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+      <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 lg:gap-16 items-center w-full">
         {/* Left Content */}
         <div className="space-y-8">
           <div className="space-y-4">
@@ -53,9 +53,9 @@ export default function HomeSection({ scrollToSection }: HomeSectionProps) {
             <Image
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/me.jpg-jBoXaIYljWRJwSnk5Qmf3pUktBPW1O.jpeg"
               alt="Ananya Nagpal"
-              width={350}
-              height={350}
-              className="rounded-lg object-cover relative z-10"
+              width={300}
+              height={300}
+              className="rounded-lg object-cover relative z-10 w-64 h-64 lg:w-80 lg:h-80"
             />
           </div>
 
@@ -71,11 +71,11 @@ export default function HomeSection({ scrollToSection }: HomeSectionProps) {
       </div>
 
       {/* Quote Section */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-full max-w-4xl">
-        <div className="border-2 border-dashed border-white rounded-lg p-8 text-center">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-full max-w-3xl px-4">
+        <div className="border-2 border-dashed border-white rounded-lg p-6 lg:p-8 text-center">
           <div className="text-6xl text-pink-400 mb-4">"</div>
           <p className="font-mono text-white text-xl leading-relaxed">
-            Control can sometimes be an illusion. But sometimes you need illusion to gain control.
+          Debug your comfort zone — that&apos;s where version 2.0 of you begins.
           </p>
           <p className="font-mono text-pink-400 text-sm mt-4">- Mr. Who</p>
         </div>

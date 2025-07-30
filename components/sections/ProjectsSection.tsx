@@ -8,9 +8,9 @@ import { projects } from "@/lib/projects-data"
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="py-20 px-8 relative">
+    <section id="projects" className="py-20 px-4 sm:px-8 relative">
       <div className="dots-pattern"></div>
-      <div className="w-full px-80">
+      <div className="max-w-6xl mx-auto">
         {/* Projects Header */}
         <div className="mb-12 flex justify-between items-center">
           <div>

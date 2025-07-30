@@ -19,9 +19,9 @@ export default function SkillsSection({ setIsTechStackModalOpen }: SkillsSection
   ]
 
   return (
-    <section id="skills" className="py-20 px-8 relative">
+    <section id="skills" className="py-20 px-4 sm:px-8 relative">
       <div className="dots-pattern"></div>
-      <div className="w-full px-80">
+      <div className="max-w-6xl mx-auto">
         {/* Skills Header */}
         <div className="mb-12">
           <h1 className="font-mono text-4xl font-normal mb-4">

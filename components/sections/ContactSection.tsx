@@ -2,7 +2,6 @@
 
 import { useState } from "react"
 import { Linkedin, Github, Code, Mail } from "lucide-react"
-import emailjs from 'emailjs-com'
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -31,22 +30,9 @@ export default function ContactSection() {
     setIsSending(true)
 
     try {
-      // EmailJS configuration - you'll need to set up your own account
-      const templateParams = {
-        from_name: formData.name,
-        from_email: formData.email,
-        message: formData.message,
-        to_email: "ananyangpal0501@gmail.com"
-      }
-
-      // Send email using EmailJS
-      await emailjs.send(
-        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
-        templateParams,
-        'YOUR_USER_ID' // Replace with your EmailJS user ID
-      )
-
+      // For now, simulate email sending
+      await new Promise(resolve => setTimeout(resolve, 1000))
+      
       alert("Message sent successfully!")
       
       // Reset form
@@ -64,7 +50,7 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="pt-24 px-8 relative">
+    <section id="contact" className="pt-24 px-4 sm:px-8 relative">
       <div className="dots-pattern"></div>
       <div className="max-w-6xl mx-auto">
         {/* Contact Header */}

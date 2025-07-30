@@ -11,9 +11,9 @@ export default function AboutSection({ setIsAboutModalOpen }: AboutSectionProps)
 
   return (
     <>
-      <section id="about" className="py-20 flex items-center px-8 relative">
+      <section id="about" className="py-20 flex items-center px-4 sm:px-8 relative">
         <div className="dots-pattern"></div>
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center w-full">
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 lg:gap-16 items-center w-full">
           {/* Left Content */}
           <div className="space-y-8">
             {/* About Header */}
