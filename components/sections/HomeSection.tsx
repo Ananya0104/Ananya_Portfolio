@@ -1,5 +1,6 @@
 "use client"
 
+import { useState, useEffect } from "react"
 import Image from "next/image"
 import { ArrowDown } from "lucide-react"
 
@@ -8,6 +9,52 @@ interface HomeSectionProps {
 }
 
 export default function HomeSection({ scrollToSection }: HomeSectionProps) {
+  const [displayText1, setDisplayText1] = useState("")
+  const [displayText2, setDisplayText2] = useState("")
+  const [displayText3, setDisplayText3] = useState("")
+
+  useEffect(() => {
+    const text1 = "Ananya Nagpal"
+    const text2 = "Full Stack Developer"
+    const text3 = "AI Enthusiast"
+
+    let index1 = 0
+    let index2 = 0
+    let index3 = 0
+
+    // First text animation
+    const timer1 = setInterval(() => {
+      if (index1 <= text1.length) {
+        setDisplayText1(text1.slice(0, index1))
+        index1++
+      } else {
+        clearInterval(timer1)
+        // Start second text after first completes
+        const timer2 = setInterval(() => {
+          if (index2 <= text2.length) {
+            setDisplayText2(text2.slice(0, index2))
+            index2++
+          } else {
+            clearInterval(timer2)
+            // Start third text after second completes
+            const timer3 = setInterval(() => {
+              if (index3 <= text3.length) {
+                setDisplayText3(text3.slice(0, index3))
+                index3++
+              } else {
+                clearInterval(timer3)
+              }
+            }, 100)
+          }
+        }, 100)
+      }
+    }, 100)
+
+    return () => {
+      clearInterval(timer1)
+    }
+  }, [])
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center px-4 sm:px-8 relative">
       <div className="geometric-lines"></div>
@@ -18,13 +65,13 @@ export default function HomeSection({ scrollToSection }: HomeSectionProps) {
             <div className="font-mono text-4xl lg:text-5xl font-normal leading-tight">
               <div className="mb-2">
                 <span className="text-white">Hi, I'm </span>
-                <span className="text-pink-400 typewriter">Ananya Nagpal</span>
+                <span className="text-pink-400">{displayText1}<span className="animate-pulse">|</span></span>
               </div>
               <div className="mt-2">
                 <span className="text-white">A passionate </span>
-                <span className="text-pink-400 typewriter-line-2">Full Stack Developer</span>
+                <span className="text-pink-400">{displayText2}<span className="animate-pulse">|</span></span>
                 <span className="text-white"> & </span>
-                <span className="text-pink-400 typewriter-line-2">AI Enthusiast</span>
+                <span className="text-pink-400">{displayText3}<span className="animate-pulse">|</span></span>
               </div>
             </div>
 

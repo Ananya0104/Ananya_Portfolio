@@ -154,12 +154,28 @@
   white-space: nowrap;
   margin: 0;
   animation: 
-    typewriter-line2 2.5s steps(25, end) 2.2s both,
-    blink 1s step-end infinite 2.2s;
+    typewriter-line2 5s steps(40, end) 2.5s both,
+    blink 1s step-end infinite 2.5s;
   font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', 'Monaco', monospace;
   font-weight: 400;
   width: 0;
   display: inline-block;
+  max-width: fit-content;
+}
+
+.typewriter-line-3 {
+  overflow: hidden;
+  border-right: 2px solid #ffffff;
+  white-space: nowrap;
+  margin: 0;
+  animation: 
+    typewriter-line2 3s steps(15, end) 7.5s both,
+    blink 1s step-end infinite 7.5s;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', 'Monaco', monospace;
+  font-weight: 400;
+  width: 0;
+  display: inline-block;
+  max-width: fit-content;
 }
 
 .highlight-purple {
