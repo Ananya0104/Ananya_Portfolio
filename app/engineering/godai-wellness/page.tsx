@@ -64,15 +64,6 @@ export default function GodaiWellnessEngineering() {
               Live Demo
               <ExternalLink className="ml-2 h-4 w-4 inline" />
             </a>
-            <a
-              href="https://github.com/godai-wellness/godai-wellness-platform"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-mono border border-gray-600 text-gray-400 hover:border-pink-400 hover:text-pink-400 transition-all duration-300 px-6 py-3 bg-transparent rounded"
-            >
-              <Github className="h-4 w-4 mr-2 inline" />
-              Source Code
-            </a>
           </div>
 
           {/* Story Section */}
@@ -140,7 +131,7 @@ export default function GodaiWellnessEngineering() {
                   <div className="space-y-6 text-lg leading-relaxed">
                     <div className="text-center mb-8">
                       <p className="text-2xl font-bold text-white mb-2">
-                        Meet Aanya.
+                        Meet Ananya.
                       </p>
                       <p className="text-xl text-pink-400 font-medium">
                         Smart, curious, full of fire.
@@ -361,6 +352,32 @@ export default function GodaiWellnessEngineering() {
                       </div>
                     </div>
                   </div>
+
+                  {/* Quiz Feature */}
+                  <div>
+                    <h3 className="font-mono text-xl font-semibold mb-4 text-white">
+                      03. Quiz Feature
+                    </h3>
+                    <div className="space-y-4">
+                      <p className="font-mono text-gray-300">
+                        An interactive quiz system with comprehensive workflow management. The feature includes user interaction flow, gateway validation, serverless processing, database storage, and results analytics with user feedback display.
+                      </p>
+                      
+                      <div className="mt-6">
+                        <div className="bg-gray-800 rounded-lg p-4 border border-gray-600">
+                          <div className="flex justify-center">
+                            <Image
+                              src="/quiz.png"
+                              alt="Quiz Feature Workflow Architecture"
+                              width={800}
+                              height={600}
+                              className="rounded-lg border border-gray-600"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </section>
@@ -384,28 +401,7 @@ export default function GodaiWellnessEngineering() {
                       Built end-to-end encryption for sensitive mental health data with HIPAA compliance considerations.
                     </p>
                   </div>
-                  <div>
-                    <h3 className="font-mono text-lg font-semibold mb-3 text-white">Scalable Architecture</h3>
-                    <p className="font-mono text-gray-300">
-                      Designed a microservices architecture that can handle thousands of concurrent users with auto-scaling.
-                    </p>
-                  </div>
                 </div>
-              </div>
-            </section>
-            {/* Key Learnings */}
-            <section>
-              <h2 className="font-mono text-2xl font-semibold mb-6 text-pink-400">
-                Key Learnings
-              </h2>
-              <div className="bg-gray-900 border border-gray-700 rounded-lg p-6">
-                <ul className="font-mono text-gray-300 space-y-3">
-                  <li>• Importance of mental health data privacy and ethical AI development</li>
-                  <li>• Building scalable systems for sensitive applications</li>
-                  <li>• Real-time communication challenges in healthcare applications</li>
-                  <li>• Balancing AI capabilities with human oversight in mental health</li>
-                  <li>• Cross-platform development for maximum accessibility</li>
-                </ul>
               </div>
             </section>
           </div>
