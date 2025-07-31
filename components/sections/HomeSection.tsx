@@ -98,22 +98,16 @@ export default function HomeSection({ scrollToSection }: HomeSectionProps) {
             <div className="absolute -inset-4 bg-gradient-to-br from-pink-400 to-pink-600 rounded-lg opacity-20"></div>
             <div className="absolute -inset-2 bg-gradient-to-br from-pink-400 to-pink-600 rounded-lg opacity-40"></div>
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/me.jpg-jBoXaIYljWRJwSnk5Qmf3pUktBPW1O.jpeg"
+              src="/me.jpg"
               alt="Ananya Nagpal"
               width={300}
               height={300}
               className="rounded-lg object-cover relative z-10 w-64 h-64 lg:w-80 lg:h-80"
+              priority
             />
           </div>
 
           {/* Status Box */}
-          <div className="absolute bottom-0 right-0 border border-pink-400 rounded-lg p-4 font-mono text-sm bg-black bg-opacity-80">
-            <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-pink-400 rounded-full animate-pulse"></div>
-              <span className="text-gray-300">Currently working on</span>
-              <span className="text-white font-semibold">Portfolio</span>
-            </div>
-          </div>
         </div>
       </div>
 

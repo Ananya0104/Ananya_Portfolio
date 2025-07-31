@@ -13,7 +13,7 @@ export default function ProjectsPage() {
 
   const filteredProjects = selectedCategory === "all" 
     ? projects 
-    : projects.filter(project => project.category === selectedCategory)
+    : projects.filter(project => project.categories.includes(selectedCategory))
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -74,7 +74,7 @@ export default function ProjectsPage() {
           </div>
 
           {/* Projects Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
             {filteredProjects.map((project, index) => (
               <Card
                 key={index}
@@ -86,13 +86,14 @@ export default function ProjectsPage() {
                     alt={project.title}
                     width={400}
                     height={300}
-                    className="w-full h-48 object-cover"
+                    className="w-full h-64 object-cover"
                   />
                   {project.featured && (
                     <div className="absolute top-4 left-4 bg-pink-400 text-black px-2 py-1 rounded text-xs font-mono font-semibold">
                       Featured
                     </div>
                   )}
+
                 </div>
                 <CardContent className="p-0">
                   {/* Tech Stack */}
@@ -103,20 +104,60 @@ export default function ProjectsPage() {
                   <div className="p-4 space-y-4">
                     <div>
                       <h3 className="font-mono text-white text-xl font-semibold mb-2">{project.title}</h3>
-                      <p className="font-mono text-gray-400 text-sm leading-relaxed">{project.description}</p>
+                      <p className="font-mono text-gray-400 text-sm leading-relaxed mb-3">{project.description}</p>
+                      <div className="flex flex-wrap gap-1 mb-3 items-center justify-between">
+                        <div className="flex flex-wrap gap-1">
+                          {project.categories.map((category, idx) => (
+                            <span key={idx} className="font-mono text-xs bg-pink-400 bg-opacity-20 text-pink-400 px-2 py-1 rounded">
+                              {category}
+                            </span>
+                          ))}
+                        </div>
+                        {project.githubUrl && (
+                          <a
+                            href={project.githubUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-black transition-all duration-300 p-1 rounded"
+                          >
+                            <Github className="h-3 w-3" />
+                          </a>
+                        )}
+                      </div>
                     </div>
-                    <div className="flex space-x-2">
-                      <button
-                        className="font-mono border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-black transition-all duration-300 flex-1 bg-transparent px-3 py-2 rounded text-sm"
-                      >
-                        Live
-                        <ExternalLink className="ml-2 h-3 w-3 inline" />
-                      </button>
-                      <button
-                        className="font-mono border border-gray-600 text-gray-400 hover:border-pink-400 hover:text-pink-400 transition-all duration-300 bg-transparent px-3 py-2 rounded text-sm"
-                      >
-                        <Github className="h-3 w-3" />
-                      </button>
+                    <div className="space-y-2 relative z-20">
+                      <div className="flex space-x-2">
+                        {project.liveUrl && project.liveUrl !== "#" && (
+                          <a
+                            href={project.liveUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-mono border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-black transition-all duration-300 flex-1 bg-transparent px-3 py-2 rounded text-sm text-center cursor-pointer relative z-20 flex items-center justify-center"
+                            style={{ pointerEvents: 'auto' }}
+                            onClick={() => console.log('Live button clicked for:', project.title)}
+                          >
+                            <span>Live</span>
+                            <ExternalLink className="ml-2 h-3 w-3" />
+                          </a>
+                        )}
+                        {project.documentationUrl && (
+                          <a
+                            href={project.documentationUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-mono border border-green-400 text-green-400 hover:bg-green-400 hover:text-black transition-all duration-300 flex-1 bg-transparent px-3 py-2 rounded text-sm text-center cursor-pointer flex items-center justify-center"
+                            style={{ pointerEvents: 'auto' }}
+                          >
+                            <span>Documentation</span>
+                            <ExternalLink className="ml-2 h-3 w-3" />
+                          </a>
+                        )}
+                        <Link href={project.engineeringUrl} className="flex-1">
+                          <button className="font-mono border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-black transition-all duration-300 w-full bg-transparent px-3 py-2 rounded text-sm text-center">
+                            Engineering
+                          </button>
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </CardContent>
@@ -134,6 +175,7 @@ export default function ProjectsPage() {
           )}
         </div>
       </div>
+      
     </div>
   )
 } 
