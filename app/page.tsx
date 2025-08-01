@@ -75,6 +75,9 @@ export default function Page() {
       {/* Footer */}
       <Footer />
 
+      {/* Bottom Spacing */}
+      <div className="h-16 bg-gradient-to-t from-black to-transparent"></div>
+
       {/* Tech Stack Modal */}
       <TechStackModal 
         isOpen={isTechStackModalOpen} 

@@ -42,8 +42,8 @@ export default function ProjectsPage() {
       <div className="pt-24 px-8">
         <div className="max-w-7xl mx-auto">
           {/* Page Header */}
-          <div className="mb-12">
-            <h1 className="font-mono text-4xl font-normal mb-4">
+          <div className="mb-16">
+            <h1 className="font-mono text-4xl font-normal mb-6">
               <span className="text-pink-400">#</span>
               <span className="text-white">all-projects</span>
             </h1>
@@ -55,7 +55,7 @@ export default function ProjectsPage() {
           </div>
 
           {/* Category Filter */}
-          <div className="mb-12">
+          <div className="mb-16">
             <div className="flex flex-wrap gap-4">
               {categories.map((category) => (
                 <button
@@ -74,7 +74,7 @@ export default function ProjectsPage() {
           </div>
 
           {/* Projects Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-10 mb-16">
             {filteredProjects.map((project, index) => (
               <Card
                 key={index}
@@ -101,11 +101,11 @@ export default function ProjectsPage() {
                     <div className="font-mono text-gray-400 text-sm">{project.technologies.join(" ")}</div>
                   </div>
                   {/* Project Info */}
-                  <div className="p-4 space-y-4">
+                  <div className="p-6 space-y-4">
                     <div>
-                      <h3 className="font-mono text-white text-xl font-semibold mb-2">{project.title}</h3>
-                      <p className="font-mono text-gray-400 text-sm leading-relaxed mb-3">{project.description}</p>
-                      <div className="flex flex-wrap gap-1 mb-3 items-center justify-between">
+                      <h3 className="font-mono text-white text-xl font-semibold mb-3">{project.title}</h3>
+                      <p className="font-mono text-gray-400 text-sm leading-relaxed mb-4">{project.description}</p>
+                      <div className="flex flex-wrap gap-1 mb-4 items-center justify-between">
                         <div className="flex flex-wrap gap-1">
                           {project.categories.map((category, idx) => (
                             <span key={idx} className="font-mono text-xs bg-pink-400 bg-opacity-20 text-pink-400 px-2 py-1 rounded">
@@ -167,7 +167,7 @@ export default function ProjectsPage() {
 
           {/* No Projects Message */}
           {filteredProjects.length === 0 && (
-            <div className="text-center py-12">
+            <div className="text-center py-16">
               <p className="font-mono text-gray-400 text-lg">
                 No projects found in this category.
               </p>
@@ -175,6 +175,12 @@ export default function ProjectsPage() {
           )}
         </div>
       </div>
+      
+      {/* Bottom Spacing */}
+      <div className="h-32"></div>
+      
+      {/* Additional Bottom Spacing for Better Visual Conclusion */}
+      <div className="h-16 bg-gradient-to-t from-black to-transparent"></div>
       
     </div>
   )

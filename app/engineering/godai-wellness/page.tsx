@@ -67,7 +67,7 @@ export default function GodaiWellnessEngineering() {
           </div>
 
           {/* Story Section */}
-          <section className="mb-16">
+          <section className="mb-20">
             <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 border border-gray-700 rounded-xl p-8 shadow-2xl">
               <div className="max-w-3xl mx-auto">
                 <h2 className="font-mono text-3xl font-bold mb-8 text-pink-400 text-center">
@@ -121,7 +121,7 @@ export default function GodaiWellnessEngineering() {
             </div>
           </section>
 
-          <section className="mb-16">
+          <section className="mb-20">
             <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 border border-gray-700 rounded-xl p-8 shadow-2xl">
               <div className="max-w-4xl mx-auto">
                 <h2 className="font-mono text-3xl font-bold mb-8 text-pink-400 text-center">
@@ -263,11 +263,11 @@ export default function GodaiWellnessEngineering() {
           </section>
 
           {/* Engineering Details */}
-          <div className="space-y-12">
+          <div className="space-y-16">
             
             {/* Database Design */}
-            <section>
-              <h2 className="font-mono text-2xl font-semibold mb-6 text-pink-400">
+            <section className="mb-16">
+              <h2 className="font-mono text-2xl font-semibold mb-8 text-pink-400">
                 Database Design
               </h2>
               <div className="bg-gray-900 border border-gray-700 rounded-lg p-6">
@@ -292,16 +292,16 @@ export default function GodaiWellnessEngineering() {
             </section>
 
             {/* Features Analysis */}
-            <section>
-              <h2 className="font-mono text-2xl font-semibold mb-6 text-pink-400">
+            <section className="mb-16">
+              <h2 className="font-mono text-2xl font-semibold mb-8 text-pink-400">
                 Features Analysis
               </h2>
               <div className="bg-gray-900 border border-gray-700 rounded-lg p-6">
-                <div className="space-y-8">
+                                  <div className="space-y-12">
                   
                   {/* Chat Feature */}
-                  <div>
-                    <h3 className="font-mono text-xl font-semibold mb-4 text-white">
+                  <div className="mb-12">
+                    <h3 className="font-mono text-xl font-semibold mb-6 text-white">
                       01. Vaira - AI Therapist
                     </h3>
                     <div className="space-y-4">
@@ -326,8 +326,8 @@ export default function GodaiWellnessEngineering() {
                   </div>
 
                   {/* Journal Feature */}
-                  <div>
-                    <h3 className="font-mono text-xl font-semibold mb-4 text-white">
+                  <div className="mb-12">
+                    <h3 className="font-mono text-xl font-semibold mb-6 text-white">
                       02. Private Journal 
                     </h3>
                     <div className="space-y-4">
@@ -354,8 +354,8 @@ export default function GodaiWellnessEngineering() {
                   </div>
 
                   {/* Mood/Sleep Tracker Feature */}
-                  <div>
-                    <h3 className="font-mono text-xl font-semibold mb-4 text-white">
+                  <div className="mb-12">
+                    <h3 className="font-mono text-xl font-semibold mb-6 text-white">
                       03. Mood/Sleep Tracker
                     </h3>
                     <div className="space-y-4">
@@ -380,8 +380,8 @@ export default function GodaiWellnessEngineering() {
                   </div>
 
                   {/* Quiz Feature */}
-                  <div>
-                    <h3 className="font-mono text-xl font-semibold mb-4 text-white">
+                  <div className="mb-12">
+                    <h3 className="font-mono text-xl font-semibold mb-6 text-white">
                       04. Quiz Feature
                     </h3>
                     <div className="space-y-4">
@@ -409,20 +409,20 @@ export default function GodaiWellnessEngineering() {
             </section>
 
             {/* Technical Challenges */}
-            <section>
-              <h2 className="font-mono text-2xl font-semibold mb-6 text-pink-400">
+            <section className="mb-16">
+              <h2 className="font-mono text-2xl font-semibold mb-8 text-pink-400">
                 Technical Challenges & Solutions
               </h2>
               <div className="bg-gray-900 border border-gray-700 rounded-lg p-6">
-                <div className="space-y-6">
+                <div className="space-y-8">
                   <div>
-                    <h3 className="font-mono text-lg font-semibold mb-3 text-white">Real-time SOS Alerts</h3>
+                    <h3 className="font-mono text-lg font-semibold mb-4 text-white">Real-time SOS Alerts</h3>
                     <p className="font-mono text-gray-300">
                       Implemented a real-time alert system for crisis situations using WebSockets and AWS SNS.
                     </p>
                   </div>
                   <div>
-                    <h3 className="font-mono text-lg font-semibold mb-3 text-white">Data Privacy & Security</h3>
+                    <h3 className="font-mono text-lg font-semibold mb-4 text-white">Data Privacy & Security</h3>
                     <p className="font-mono text-gray-300">
                       Built end-to-end encryption for sensitive mental health data with HIPAA compliance considerations.
                     </p>
@@ -432,12 +432,13 @@ export default function GodaiWellnessEngineering() {
             </section>
 
             {/* Tech Stack */}
-            <section>
-              <h2 className="font-mono text-2xl font-semibold mb-6 text-pink-400">
+            <section className="mb-16">
+              <h2 className="font-mono text-2xl font-semibold mb-8 text-pink-400">
                 🛠️ Tech Stack
               </h2>
               <div className="bg-gray-900 border border-gray-700 rounded-lg p-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    
                   
                   {/* Backend Technologies */}
                   <div className="bg-gradient-to-br from-blue-900 to-blue-800 border border-blue-600 rounded-lg p-4 hover:scale-105 transition-transform">
