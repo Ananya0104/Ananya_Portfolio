@@ -27,9 +27,8 @@ export default function AboutSection({ setIsAboutModalOpen }: AboutSectionProps)
 
             {/* About Content */}
             <div className="space-y-6">
-              <p className="font-mono text-gray-300 text-lg leading-relaxed">Hello, i'm Ananya!</p>
               <p className="font-mono text-gray-300 text-base leading-relaxed">
-              Hi, I&apos;m Ananya Nagpal — a curious builder, full-stack developer, and lifelong learner currently pursuing Electrical Engineering at IIT Jodhpur. 
+              Hi, I&apos;m Ananya Nagpal — a curious builder, full-stack developer, and lifelong learner currently pursuing final year in Electrical Engineering at IIT Jodhpur. 
               </p>
               <p className="font-mono text-gray-300 text-base leading-relaxed">
               My journey with technology didn&apos;t just start with writing code — it started with a mindset of solving real-world problems, and has since grown into a love for creating seamless, scalable, and meaningful digital experiences.

@@ -23,6 +23,16 @@ export const projects: Project[] = [
     featured: true
   },
   {
+    title: "Super Customer Care",
+    description: "A smarter, friendlier, human-first platform for customer support that eliminates endless menus and connects users to real help instantly. Features one-click video support, and context-aware conversations. Built for speed, empathy, and resolution — so support finally feels like support.",
+    image: "/scc.png",
+    technologies: ["Golang", "AWS", "DynamoDB", "Nextjs"],
+    categories: ["Full Stack", "Frontend", "Backend"],
+    liveUrl: "https://supercustomercare.club/",
+    engineeringUrl: "/engineering/scc",
+    featured: true
+  },
+  {
     title: "VidGenie",
     description: "Why watch the whole video when you can ask it questions? VidGenie blends cutting-edge AI with video processing to let you search, understand, and pinpoint key moments — instantly. Empower your workflow with transcriptions, visual captions, and timestamped answers — all in one seamless interface.",
     image: "/vidgenie.png",
@@ -31,11 +41,11 @@ export const projects: Project[] = [
     liveUrl: "https://vidgenie-your-smart-video-chatbot.streamlit.app/",
     githubUrl: "https://github.com/Ananya0104/VidGenie-Your-Smart-Video-Chatbot",
     engineeringUrl: "/engineering/vidgenie",
-    featured: true
+    featured: false
   },
   {
     title: "Basic RAG Implementation",
-    description: "This project showcases a streamlined Retrieval-Augmented Generation (RAG) pipeline that enhances the capabilities of language models by grounding responses in external knowledge. Through efficient document ingestion, intelligent retrieval via vector embeddings, and contextual synthesis, it delivers accurate and informed answers to user queries.",
+    description: "This project showcases a streamlined RAG pipeline that enhances the capabilities of language models by grounding responses in external knowledge. Through efficient document ingestion, intelligent retrieval via vector embeddings, and contextual synthesis, it delivers accurate and informed answers to user queries.",
     image: "/basic_rag.png",
     technologies: ["Python", "FAISS", "Mistral API", "Vector Databases"],
     categories: ["AI/ML", "Backend"],
@@ -43,16 +53,6 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/Ananya0104/Basic-RAG-Implementation",
     engineeringUrl: "/engineering/basic-rag-system",
     documentationUrl: "https://drive.google.com/file/d/1h5eAaxsNGde8YqGJeFu9wVYxZ7IKrUcc/view?usp=sharing",
-    featured: false
-  },
-  {
-    title: "Wedora Website",
-    description: "Modern wedding planning platform with real-time collaboration features. Built with Next.js and includes features like vendor management, timeline planning, and budget tracking.",
-    image: "/placeholder.svg?height=300&width=400&text=Wedora+Website",
-    technologies: ["Next.js", "TypeScript", "TailwindCSS", "Prisma", "PostgreSQL"],
-    categories: ["Full Stack"],
-    liveUrl: "#",
-    engineeringUrl: "/engineering/wedora",
     featured: false
   }
 ]

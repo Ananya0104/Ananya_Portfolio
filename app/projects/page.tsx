@@ -84,9 +84,9 @@ export default function ProjectsPage() {
                   <Image
                     src={project.image || "/placeholder.svg"}
                     alt={project.title}
-                    width={400}
-                    height={300}
-                    className="w-full h-64 object-cover"
+                    width={800}
+                    height={800}
+                    className="w-full h-80 object-cover"
                   />
                   {project.featured && (
                     <div className="absolute top-4 left-4 bg-pink-400 text-black px-2 py-1 rounded text-xs font-mono font-semibold">

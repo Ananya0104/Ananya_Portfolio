@@ -33,9 +33,9 @@ export default function ProjectsSection() {
                 <Image
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
-                  width={300}
-                  height={200}
-                  className="w-full h-64 object-cover"
+                  width={800}
+                  height={800}
+                  className="w-full h-80 object-cover"
                 />
               </div>
               <CardContent className="p-4">
