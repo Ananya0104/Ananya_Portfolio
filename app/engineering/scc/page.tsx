@@ -339,7 +339,7 @@ export default function SCCEngineering() {
                 </div>
                 
                 <div className="mb-6">
-                  <p className="font-mono text-gray-300 text-center mb-4">
+                  <p className="font-mono text-gray-300 text-left mb-4">
                     A sophisticated state machine that manages the complete lifecycle of support tickets, from initial queue entry to final resolution or archival.
                   </p>
                 </div>
@@ -358,6 +358,38 @@ export default function SCCEngineering() {
                 </div>
               </div>
             </section>
+
+            {/* Video Call Integration */}
+            <div className="bg-gray-900 border border-gray-700 rounded-lg p-6 mb-8">
+              <div className="flex items-center mb-6">
+                <div className="bg-purple-400 p-2 rounded-lg mr-3">
+                  <Phone className="h-5 w-5 text-black" />
+                </div>
+                <h3 className="font-mono text-xl font-semibold text-purple-400">
+                  2. Video Call Integration (Jitsi Open Source)
+                </h3>
+              </div>
+              
+              <div className="mb-6">
+                <p className="font-mono text-gray-300 text-left mb-4">
+                  Seamless video communication powered by Jitsi Meet, enabling instant face-to-face support sessions with real-time connection management.
+                </p>
+              </div>
+              
+              <div className="flex justify-center mb-6">
+                <div className="relative w-full max-w-4xl">
+                  <Image
+                    src="/video1.png"
+                    alt="Video Call Integration Sequence Diagram showing User, Partner, and Backend interactions for video session management"
+                    width={800}
+                    height={400}
+                    className="rounded-lg border border-gray-600 shadow-lg"
+                    priority
+                  />
+                </div>
+            
+              </div>
+            </div>
 
             {/* Engineering Details */}
             <div className="space-y-16">
