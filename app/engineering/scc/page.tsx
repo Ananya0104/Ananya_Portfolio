@@ -345,11 +345,11 @@ export default function SCCEngineering() {
                 </div>
                 
                 <div className="flex justify-center mb-6">
-                  <div className="relative w-full max-w-4xl">
+                  <div className="relative w-full max-w-4xl flex justify-center">
                     <Image
                       src="/queue.png"
                       alt="Queue Management System State Diagram showing user states: User Joins Queue, Processing, Waiting, Completed, Left, and Archived states with transition paths"
-                      width={800}
+                      width={600}
                       height={400}
                       className="rounded-lg border border-gray-600 shadow-lg"
                       priority
@@ -377,11 +377,11 @@ export default function SCCEngineering() {
               </div>
               
               <div className="flex justify-center mb-6">
-                <div className="relative w-full max-w-4xl">
+                <div className="relative w-full max-w-4xl flex justify-center">
                   <Image
                     src="/video1.png"
                     alt="Video Call Integration Sequence Diagram showing User, Partner, and Backend interactions for video session management"
-                    width={800}
+                    width={600}
                     height={400}
                     className="rounded-lg border border-gray-600 shadow-lg"
                     priority
