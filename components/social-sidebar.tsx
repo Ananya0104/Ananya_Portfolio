@@ -70,7 +70,7 @@ export default function SocialSidebar() {
             onClick={() => {
               console.log("Sidebar Resume clicked");
               // Try different approaches to open the resume
-              const resumeUrl = "https://drive.google.com/file/d/1f7qR2R3XD-MIwcd2UYaLlNW73YASh7JL/view?usp=drive_link";
+              const resumeUrl = "https://drive.google.com/file/d/1dox2zYSF1VGyd44MeCpM9gx9Q32EKJxA/view?usp=sharing";
               
               // Method 1: Try window.open with features
               const newWindow = window.open(resumeUrl, "_blank", "noopener,noreferrer");

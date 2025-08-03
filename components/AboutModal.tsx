@@ -57,7 +57,7 @@ export default function AboutModal({ isOpen, onClose, setIsTechStackModalOpen }:
                 <div className="flex justify-end">
                   <button 
                     className="border border-white text-pink-400 font-mono px-6 py-2 rounded-lg hover:bg-pink-400 hover:text-black transition-colors"
-                    onClick={() => window.open('https://drive.google.com/file/d/1f7qR2R3XD-MIwcd2UYaLlNW73YASh7JL/view?usp=drive_link', '_blank')}
+                    onClick={() => window.open('https://drive.google.com/file/d/1dox2zYSF1VGyd44MeCpM9gx9Q32EKJxA/view?usp=sharing', '_blank')}
                   >
                     Resume
                   </button>
