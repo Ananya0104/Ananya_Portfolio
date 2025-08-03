@@ -327,28 +327,28 @@ export default function SCCEngineering() {
                 </h2>
               </div>
               
-              {/* Ticket and Queue Management System */}
+              {/* Partner Management System */}
               <div className="bg-gray-900 border border-gray-700 rounded-lg p-6 mb-8">
                 <div className="flex items-center mb-6">
-                  <div className="bg-blue-400 p-2 rounded-lg mr-3">
-                    <MessageSquare className="h-5 w-5 text-black" />
+                  <div className="bg-green-400 p-2 rounded-lg mr-3">
+                    <Users className="h-5 w-5 text-black" />
                   </div>
-                  <h3 className="font-mono text-xl font-semibold text-blue-400">
-                    1. Ticket and Queue Management System
+                  <h3 className="font-mono text-xl font-semibold text-green-400">
+                    1. Partner Management System
                   </h3>
                 </div>
                 
                 <div className="mb-6">
                   <p className="font-mono text-gray-300 text-left mb-4">
-                    A sophisticated state machine that manages the complete lifecycle of support tickets, from initial queue entry to final resolution or archival.
+                    A comprehensive partner management system that handles authentication, profile management, and customer queue interactions with seamless video integration.
                   </p>
                 </div>
                 
                 <div className="flex justify-center mb-6">
                   <div className="relative w-full max-w-4xl flex justify-center">
                     <Image
-                      src="/queue.png"
-                      alt="Queue Management System State Diagram showing user states: User Joins Queue, Processing, Waiting, Completed, Left, and Archived states with transition paths"
+                      src="/partner.png"
+                      alt="Partner System Sequence Diagram showing interactions between Partner, Backend, DynamoDB, and Video Service for authentication, queue management, and video sessions"
                       width={600}
                       height={400}
                       className="rounded-lg border border-gray-600 shadow-lg"
@@ -359,6 +359,37 @@ export default function SCCEngineering() {
               </div>
             </section>
 
+            {/* Ticket and Queue Management System */}
+            <div className="bg-gray-900 border border-gray-700 rounded-lg p-6 mb-8">
+              <div className="flex items-center mb-6">
+                <div className="bg-blue-400 p-2 rounded-lg mr-3">
+                  <MessageSquare className="h-5 w-5 text-black" />
+                </div>
+                <h3 className="font-mono text-xl font-semibold text-blue-400">
+                  2. Ticket and Queue Management System
+                </h3>
+              </div>
+              
+              <div className="mb-6">
+                <p className="font-mono text-gray-300 text-left mb-4">
+                  A sophisticated state machine that manages the complete lifecycle of support tickets, from initial queue entry to final resolution or archival.
+                </p>
+              </div>
+              
+              <div className="flex justify-center mb-6">
+                <div className="relative w-full max-w-4xl flex justify-center">
+                  <Image
+                    src="/queue.png"
+                    alt="Queue Management System State Diagram showing user states: User Joins Queue, Processing, Waiting, Completed, Left, and Archived states with transition paths"
+                    width={600}
+                    height={400}
+                    className="rounded-lg border border-gray-600 shadow-lg"
+                    priority
+                  />
+                </div>
+              </div>
+            </div>
+
             {/* Video Call Integration */}
             <div className="bg-gray-900 border border-gray-700 rounded-lg p-6 mb-8">
               <div className="flex items-center mb-6">
@@ -366,7 +397,7 @@ export default function SCCEngineering() {
                   <Phone className="h-5 w-5 text-black" />
                 </div>
                 <h3 className="font-mono text-xl font-semibold text-purple-400">
-                  2. Video Call Integration (Jitsi Open Source)
+                  3. Video Call Integration (Jitsi Open Source)
                 </h3>
               </div>
               
@@ -390,6 +421,8 @@ export default function SCCEngineering() {
             
               </div>
             </div>
+
+
 
             {/* Engineering Details */}
             <div className="space-y-16">

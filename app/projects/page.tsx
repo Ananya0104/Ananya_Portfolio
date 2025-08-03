@@ -33,7 +33,7 @@ export default function ProjectsPage() {
           </div>
           <div className="text-xl font-mono font-bold">
             <span className="text-white">@</span>
-            <span className="text-white">Ananya</span>
+            <span className="text-white">AnanyaNagpal</span>
           </div>
         </div>
       </div>
