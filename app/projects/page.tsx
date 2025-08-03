@@ -179,9 +179,6 @@ export default function ProjectsPage() {
       {/* Bottom Spacing */}
       <div className="h-32"></div>
       
-      {/* Additional Bottom Spacing for Better Visual Conclusion */}
-      <div className="h-16 bg-gradient-to-t from-black to-transparent"></div>
-      
     </div>
   )
 } 

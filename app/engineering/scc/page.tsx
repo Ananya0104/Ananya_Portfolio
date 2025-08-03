@@ -41,12 +41,12 @@ export default function SCCEngineering() {
               <div>
                 <h1 className="font-mono text-4xl font-normal">
                   <span className="text-blue-400">#</span>
-                  <span className="text-white">scc-engineering</span>
+                  <span className="text-white">Super-Customer-Care-Engineering</span>
                 </h1>
-                <p className="font-mono text-gray-400 mt-2">Super Customer Care — Support Reimagined</p>
+                <p className="font-mono text-gray-400 mt-2">Support Reimagined</p>
               </div>
             </div>
-            <div className="w-64 h-px bg-blue-400 mb-8"></div>
+            <div className="w-640 h-px bg-blue-400 mb-8"></div>
           </div>
 
           {/* Project Links */}
@@ -199,7 +199,7 @@ export default function SCCEngineering() {
 
             {/* The Solution */}
             <section className="mb-20">
-              <div className="bg-gradient-to-br from-green-900 via-blue-900 to-green-900 border border-green-700 rounded-xl p-8 shadow-2xl">
+              <div className="bg-gray-800 rounded-xl p-8 shadow-2xl border-blue-400">
                 <h2 className="font-mono text-2xl font-bold mb-8 text-green-400 text-center">
                   💡 The Solution: Super Customer Care
                 </h2>
@@ -285,6 +285,80 @@ export default function SCCEngineering() {
               </div>
             </section>
 
+            {/* Database Design */}
+            <section className="mb-16">
+              <div className="flex items-center mb-8">
+                <div className="bg-purple-400 p-3 rounded-lg mr-4">
+                  <Database className="h-6 w-6 text-black" />
+                </div>
+                <h2 className="font-mono text-2xl font-semibold text-purple-400">
+                  🗄️ Database Design
+                </h2>
+              </div>
+              <div className="bg-gray-900 border border-gray-700 rounded-lg p-6">
+                <div className="mb-6">
+                  <p className="font-mono text-gray-300 text-center mb-4">
+                    The database schema is designed to efficiently manage partners, users, and their support tickets with clear relationships and optimized data flow.
+                  </p>
+                </div>
+                <div className="flex justify-center">
+                  <div className="relative w-full max-w-4xl">
+                    <Image
+                      src="/scc_db.png"
+                      alt="SCC Database Schema - Entity Relationship Diagram showing super_cc_ticket_queue, super_cc_partners, super_cc_ticket_archive, and super_cc_users collections with their relationships"
+                      width={800}
+                      height={600}
+                      className="rounded-lg border border-gray-600 shadow-lg"
+                      priority
+                    />
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Feature Analysis */}
+            <section className="mb-16">
+              <div className="flex items-center mb-8">
+                <div className="bg-green-400 p-3 rounded-lg mr-4">
+                  <Target className="h-6 w-6 text-black" />
+                </div>
+                <h2 className="font-mono text-2xl font-semibold text-green-400">
+                  🎯 Feature Analysis
+                </h2>
+              </div>
+              
+              {/* Ticket and Queue Management System */}
+              <div className="bg-gray-900 border border-gray-700 rounded-lg p-6 mb-8">
+                <div className="flex items-center mb-6">
+                  <div className="bg-blue-400 p-2 rounded-lg mr-3">
+                    <MessageSquare className="h-5 w-5 text-black" />
+                  </div>
+                  <h3 className="font-mono text-xl font-semibold text-blue-400">
+                    1. Ticket and Queue Management System
+                  </h3>
+                </div>
+                
+                <div className="mb-6">
+                  <p className="font-mono text-gray-300 text-center mb-4">
+                    A sophisticated state machine that manages the complete lifecycle of support tickets, from initial queue entry to final resolution or archival.
+                  </p>
+                </div>
+                
+                <div className="flex justify-center mb-6">
+                  <div className="relative w-full max-w-4xl">
+                    <Image
+                      src="/queue.png"
+                      alt="Queue Management System State Diagram showing user states: User Joins Queue, Processing, Waiting, Completed, Left, and Archived states with transition paths"
+                      width={800}
+                      height={400}
+                      className="rounded-lg border border-gray-600 shadow-lg"
+                      priority
+                    />
+                  </div>
+                </div>
+              </div>
+            </section>
+
             {/* Engineering Details */}
             <div className="space-y-16">
             {/* Tech Stack */}
@@ -337,7 +411,7 @@ export default function SCCEngineering() {
                   <div className="bg-gradient-to-br from-yellow-900 to-yellow-800 border border-yellow-600 rounded-lg p-4 hover:scale-105 transition-transform">
                     <div className="text-center">
                       <div className="text-3xl mb-2">📹</div>
-                      <h3 className="font-mono text-sm font-semibold text-yellow-200">WebRTC</h3>
+                      <h3 className="font-mono text-sm font-semibold text-yellow-200">Jitsi</h3>
                       <p className="text-xs text-yellow-300 mt-1">Video Communication</p>
                     </div>
                   </div>
